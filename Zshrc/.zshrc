@@ -77,11 +77,11 @@ export COCOS_CONSOLE_ROOT=/Users/KEI/Cocos2d-x/cocos2d-x-3.3rc0/tools/cocos2d-co
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/Users/KEI/AndroidNDK/android-ndk-r9d
+export NDK_ROOT=$HOME/AndroidNDK/android-ndk-r9d
 export PATH=$NDK_ROOT:$PATH
 
 # Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/KEI/AndroidSDK/adt-bundle-mac-x86_64-20140702/sdk
+export ANDROID_SDK_ROOT=$HOME/AndroidSDK/adt-bundle-mac-x86_64-20140702/sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
 
@@ -90,13 +90,13 @@ export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/libexec/bin
 export PATH=$ANT_ROOT:$PATH
 # User Added
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 if which pyenv > /dev/null; then
     export PYENV_ROOT="$HOME/.pyenv"
     export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
+    eval "$(pyenv init - zsh)"
 fi
 
 
@@ -104,3 +104,13 @@ fi
 alias vi='env LANG=en_US.utf8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias brew='env PATH=${PATH/\/Users\/KEI\/\.pyenv\/shims:/} brew'
 alias la='ls -a'
+alias prev='open -a Preview'
+alias tterm='open /Applications/TotalTerminal.app'
+alias tc="open $HOME/Applications/ContestAppletProd.jnlp"
+alias iterm='open /Applications/iTerm.app'
+
+# User hash
+hash -d cs225=$HOME/UIUC/CS225
+hash -d cs427=$HOME/UIUC/CS427
+
+export PATH="/usr/local/sbin:$PATH"
